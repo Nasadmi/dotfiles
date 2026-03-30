@@ -1,0 +1,39 @@
+[global]
+    ### Estructura y Fuente
+    font = Hack Nerd Font Mono 11
+    allow_markup = yes
+    format = "<b>%s</b>\n%b"
+    sort = yes
+    indicate_hidden = yes
+    alignment = center
+    
+    ### Geometría (Para que flote como tu barra)
+    width = 300
+    height = 100
+    offset = 15x60
+    origin = top-right
+    corner_radius = 12
+    padding = 12
+    horizontal_padding = 12
+    frame_width = 2
+    
+    ### Colores de los bordes
+    frame_color = "#00d7ff" # Tu azul
+    follow = mouse
+
+[urgency_low]
+    background = "#141414e6"
+    foreground = "#ffffff"
+    timeout = 5
+
+[urgency_normal]
+    background = "#141414e6"
+    foreground = "#ffffff"
+    frame_color = "#00d7ff" # Azul para lo normal
+    timeout = 10
+
+[urgency_critical]
+    background = "#141414"
+    foreground = "#ffffff"
+    frame_color = "#ff8700" # Naranja para alertas críticas
+    timeout = 0
