@@ -51,6 +51,8 @@ pip install --break-system-packages psutil dbus-fast pulsectl_asyncio
 git clone -b main --depth=1 https://github.com/uiriansan/SilentSDDM
 cd SilentSDDM && sudo ./install.sh && cd ..
 rm -rf SilentSDDM
+sudo mkdir -p /etc/sddm.conf.d
+echo -e "[Autologin]\nSession=qtile.desktop\nUser=$USER\n\n[General]\nDisplayServer=x11" | sudo tee /etc/sddm.conf.d/10-session.conf
 
 sudo systemctl enable sddm.service
 sudo systemctl enable bluetooth.service

@@ -6,6 +6,7 @@ from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Output, Screen, DropDown, ScratchPad
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+from network_finder import get_network_interface
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -143,6 +144,8 @@ layouts = [
     # layout.Zoomy(),
 ]
 
+interface_name = get_network_interface()
+
 widget_defaults = dict(
     font="sans",
     fontsize=12,
@@ -251,7 +254,7 @@ def baseWidgets():
         ),
         icon(txt='󰤨', fg=colors['orange'], p=9),
         widget.Net(
-            interface='wlp0s20f3',
+            interface=interface_name,
             format='{down:.0f}{down_suffix}  {up:.0f}{up_suffix}',
             font='Hack Nerd Font Mono Bold',
             background=colors['bg'],
