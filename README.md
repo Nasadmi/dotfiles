@@ -3,6 +3,10 @@ A Qtile (X11)-based desktop environment optimized for efficiency and aesthetics.
 
 - [**Spanish Version**](./README.es.md)
 
+![Desktop](./screenshots/desktop.png)
+---
+![Terminal](./screenshots/terminal.png)
+
 ## Installation Instructions
 Designed for deployment on Arch Linux Minimal. The installation script manages dependencies, themes, icons, cursors, and system services.
 

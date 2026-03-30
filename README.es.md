@@ -1,6 +1,10 @@
 # Qtile Dotfiles: Minimal Arch Rice
 Un entorno de escritorio basado en **Qtile (X11)** optimizado para la eficiencia y la estética. Este setup utiliza una paleta de colores vibrante en **Azul, Amarillo y Naranja**, con una automatización completa para instalaciones frescas de **Arch Linux**.
 - [**Versión en Inglés**](./README.md)
+
+![Desktop](./screenshots/desktop.png)
+---
+![Terminal](./screenshots/terminal.png)
 ----
 ## Instrucciones de instalación
 Diseñado para ser desplegado en **Arch Linux Minimal**. El script de instalación gestiona dependencias, temas, iconos, cursores y servicios de sistema.

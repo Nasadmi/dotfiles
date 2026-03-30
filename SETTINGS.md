@@ -1,6 +1,6 @@
 # Configuration and File Paths
 
-This document details the exact location of the configuration files for each software included in these dotfiles. **Note:** All paths are relative to the ```$HOME``` directory.
+This document details the exact location of the configuration files for each software included in these dotfiles. **Note:** All paths are relative to the ```$HOME``` directory. It is recommended to use ```code``` to edit these files.
 
 |Software|Configuration Path|Description|
 |--------|---------------------|-----------|

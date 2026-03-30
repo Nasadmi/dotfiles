@@ -1,6 +1,6 @@
 # Configuración y Rutas de Archivo
 
-Este documento detalla la ubicación exacta de los archivos de configuración de cada software incluido en estos dotfiles. **Nota:** Todas las rutas son relativas al directorio ```$HOME```.
+Este documento detalla la ubicación exacta de los archivos de configuración de cada software incluido en estos dotfiles. **Nota:** Todas las rutas son relativas al directorio ```$HOME```. Se recomienda el uso de ```code``` para editar estos archivos.
 
 |Software|Ruta de configuración|Descripción|
 |--------|---------------------|-----------|
