@@ -40,7 +40,7 @@ sudo pacman -S --noconfirm qtile kitty python-pip rofi stow sddm dunst starship 
     ttf-hack-nerd otf-firamono-nerd fish pulseaudio pulseaudio-alsa \
     pulseaudio-bluetooth pulseaudio-jack alsa-utils pavucontrol xclip \
     xorg-xinit vlc gvfs ntfs-3g udiskie thunar flameshot bluez bluez-utils \
-    blueman fastfetch btop ranger unzip qt6-base qt6-svg lxappearance feh
+    blueman fastfetch btop ranger unzip qt6-base qt6-svg lxappearance feh code
 
 yay -S --noconfirm picom-pijulius-next-git google-chrome pear-desktop rofi-greenclip
 
