@@ -1,4 +1,4 @@
 udiskie -t &
 dunst &
-picom --config ~/.config/picom/picom.conf &
-feh --bg-scale ~/wallpapers/default.png &
+picom --config $HOME/.config/picom/picom.conf &
+feh --bg-scale $HOME/wallpapers/default.png &

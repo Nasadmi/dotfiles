@@ -328,7 +328,7 @@ floating_layout = layout.Floating(
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
-    subprocess.Popen([home])
+    subprocess.Popen(['sh', home])
 
 auto_fullscreen = True
 focus_on_window_activation = "smart"

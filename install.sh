@@ -40,7 +40,7 @@ sudo pacman -S --noconfirm qtile kitty python-pip rofi stow sddm dunst starship 
     ttf-hack-nerd otf-firamono-nerd fish pulseaudio pulseaudio-alsa \
     pulseaudio-bluetooth pulseaudio-jack alsa-utils pavucontrol xclip \
     xorg-xinit vlc gvfs ntfs-3g udiskie thunar flameshot bluez bluez-utils \
-    blueman fastfetch btop ranger unzip qt6-base qt6-svg lxappearance
+    blueman fastfetch btop ranger unzip qt6-base qt6-svg lxappearance feh
 
 yay -S --noconfirm picom-pijulius-next-git google-chrome pear-desktop rofi-greenclip
 
@@ -71,10 +71,17 @@ cd Vimix-cursors
 cd .. && rm -rf Vimix-cursors
 
 # Tokyonight GTK Theme
-git clone https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme
-cd Tokyonight-GTK-Theme
-./install.sh -d ~/.local/share/themes -n Tokyonight-BL-MB-Dark -c dark --tweaks moon macos
-cd .. && rm -rf Tokyonight-GTK-Theme
+if git clone https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme; then
+    cd Tokyonight-GTK-Theme
+    chmod +x ./themes/install.sh
+    ./themes/install.sh -d ~/.local/share/themes -n Tokyonight-BL-MB-Dark -c dark --tweaks moon macos
+    cd ..
+    rm -rf Tokyonight-GTK-Theme
+fi
+
+# Fastfetch presets
+cd ~/.local/share
+git clone https://github.com/LierB/fastfetch
 
 # --- 7. Final Configuration & Stow ---
 echo -e "\033[0;36mAplying settings from dotfiles...\033[0m"
@@ -87,10 +94,19 @@ chmod +x .config/rofi/launchers/type-4/launcher.sh
 chmod +x .config/rofi/launchers/type-1/launcher.sh
 chmod +x .config/qtile/autostart.sh
 
+# Cambiar shell
+if [ "$SHELL" != "/usr/bin/fish" ]; then
+    echo -e "Change default shell..."
+    sudo chsh -s /usr/bin/fish $USER
+fi
+
 # Stow (el punto indica el directorio actual)
 stow .
 
 # Greenclip User Service
 systemctl --user enable --now greenclip.service
 
+echo -e "\033[0;32m\033[0m"
+
+echo -e "To change the root shell execute ./setroot.sh with root priviliges"
 echo -e "\033[0;32mDONE! Reboot system\033[0m"
