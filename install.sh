@@ -36,7 +36,7 @@ fi
 
 # --- 4. Package Installation ---
 echo -e "\033[1;33mInstalling packages...\033[0m"
-sudo pacman -S --noconfirm qtile kitty python-pip rofi stow sddm dunst starship \
+sudo pacman -S --noconfirm qtile kitty pacman-contrib python-pip rofi stow sddm dunst starship \
     ttf-hack-nerd otf-firamono-nerd fish pulseaudio pulseaudio-alsa \
     pulseaudio-bluetooth pulseaudio-jack alsa-utils pavucontrol xclip \
     xorg-xinit vlc gvfs ntfs-3g udiskie thunar flameshot bluez bluez-utils \

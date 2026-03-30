@@ -260,6 +260,17 @@ def baseWidgets():
             background=colors['bg'],
             foreground=colors['orange'],
         ),
+        icon(txt='', fg=colors['fg'], p=9),
+        widget.CheckUpdates(
+            background=colors['bg'],
+            colour_have_updates=colors['fg'],
+            colour_no_updates=colors['fg'],
+            no_update_string='0',
+            display_format='{updates}',
+            update_interval=1800,
+            custom_command='checkupdates',
+            font='Hack Nerd Font Mono'
+        ),
         icon(txt='󰌌', fg=colors["green"]),
         widget.KeyboardLayout(
             background=colors['bg'],
